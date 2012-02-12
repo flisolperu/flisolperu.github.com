@@ -7,7 +7,14 @@
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
-article,
+article {
+background-color: #f5f5f5;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+,
 aside,
 details,
 figcaption,
@@ -3339,7 +3346,7 @@ a.thumbnail:hover {
 }
 .hero-unit h1 {
   margin-bottom: 0;
-  font-size: 60px;
+  font-size: 40px;
   line-height: 1;
   letter-spacing: -1px;
 }
