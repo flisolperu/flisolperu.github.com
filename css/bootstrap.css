@@ -3389,13 +3389,13 @@ height:90px;
 float: left;
 }
 #img2 a{
-background:url(../img/facebook_active.png) no-repeat;
+background:url(../img/facebook_dark.png) no-repeat;
 width: 90px;
 height:90px;
 float: left;
 }
 #img2 a:hover{
-background:url(../img/facebook_dark.png) no-repeat;
+background:url(../img/facebook_active.png) no-repeat;
 width: 90px;
 height:90px;
 float: left;
