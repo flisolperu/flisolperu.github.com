@@ -3377,13 +3377,13 @@ padding: 20px 5px 0px 0px;
 
 }
 #img1 a{
-background:url(../img/blog_active.png) no-repeat;
+background:url(../img/blog_dark.png) no-repeat;
 width: 90px;
 height:90px;
 float: left;
 }
 #img1 a:hover{
-background:url(../img/blog_dark.png) no-repeat;
+background:url(../img/blog_active.png) no-repeat;
 width: 90px;
 height:90px;
 float: left;
@@ -3401,13 +3401,13 @@ height:90px;
 float: left;
 }
 #img3 a{
-background:url(../img/twitter_active.png) no-repeat;
+background:url(../img/twitter_dark.png) no-repeat;
 width: 90px;
 height:90px;
 float: left;
 }
 #img3 a:hover{
-background:url(../img/twitter_dark.png) no-repeat;
+background:url(../img/twitter_active.png) no-repeat;
 width: 90px;
 height:90px;
 float: left;
