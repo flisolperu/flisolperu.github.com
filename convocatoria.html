@@ -3,7 +3,8 @@
   <head>
   <script src="js/jquery.js" type="text/javascript"></script>
   <script src="js/kkcountdown.min.js" type="text/javascript"></script>
-  <script src="js/bootstrap-tab.js"></script>
+  <script src="js/bootstrap-carousel.js" type="text/javascript"></script>
+  <script src="js/bootstrap-transition.js" type="text/javascript"></script>
   
     <meta charset="utf-8">
     <title>Flisol 2012 - Cuando el software libre no esta en tu computadora sino en tu mente.</title>
@@ -23,9 +24,9 @@
         padding-bottom: 40px;
       }
 	  #odliczanie-a{
-                font-size: 40px;
+                font-size: 70px;
                 font-family: Verdana, sans-serif;
-				margin: 40px 0px;
+				margin: 0px 0px;
             }
             }
 
@@ -42,6 +43,7 @@
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	  
 	 <script type="text/javascript">
             $(document).ready(function(){
                 $(".kkcount-down-1").kkcountdown({
@@ -69,13 +71,13 @@
             	console.log('KONIEC');
             }
 			
+			$(function () {
+    //    $('.carousel').carousel({ interval: 2000 })
+
+        $('#myCarousel').carousel()
+            });
+			
         </script>
-		
-		<script>
-  $(function () {
-    $('.tabs a:last').tab('show')
-  })
-</script>
 
   </head>
 
@@ -94,25 +96,25 @@
     </a>
 	
     <ul class="dropdown-menu">
-			<li><a href="#acerca.html">Arequipa</a></li>
-			<li><a href="#videos.html">Ayacucho</a></li>
-			<li><a href="#organizacion.html">Chiclayo</a></li>
-			<li><a href="#videos.html">Cuzco</a></li>
-			<li><a href="#acerca.html">Junin</a></li>
-            <li><a href="#organizacion.html">Lima</a></li>
-			<li><a href="#sedes.html">Loreto</a></li>
-			<li><a href="#sedes.html">Puno</a></li>
-			<li><a href="#fotos.html">Tacna</a></li>
-			<li><a href="#fotos.html">Trujillo</a></li>
+			<li><a href="#arequipa.html">Arequipa</a></li>
+			<li><a href="#ayacucho.html">Ayacucho</a></li>
+			<li><a href="#chiclayo.html">Chiclayo</a></li>
+			<li><a href="#cuzco.html">Cuzco</a></li>
+			<li><a href="#junin.html">Junin</a></li>
+            <li><a href="#lima.html">Lima</a></li>
+			<li><a href="#loreto.html">Loreto</a></li>
+			<li><a href="#puno.html">Puno</a></li>
+			<li><a href="#tacna.html">Tacna</a></li>
+			<li><a href="#trujillo.html">Trujillo</a></li>
     </ul>
 	
   </li>
   <ul class="nav">
-  <li><a href="#">Instalación</a></li>
-  <li><a href="#">Botones</a></li>
-  <li><a href="#">Patrocinio</a></li>
-  <li><a href="#">Registro</a></li>
-<li><a href="#">¿Qué es FLISOL?</a></li>	  
+  <li><a href="instalacion.html">Instalación</a></li>
+  <li><a href="botones.html">Botones</a></li>
+  <li><a href="patrocinio.html">Patrocinio</a></li>
+  <li><a href="registro.html">Registro</a></li>
+<li><a href="que.html">¿Qué es FLISOL?</a></li>	  
   <span class="label label-info">INFO</span> 
   </ul>
   </div>
@@ -176,27 +178,30 @@ Este documento se encuentra disponible en <a href="http://goo.gl/71CuK ">Google 
       </div>
 
       <!-- Example row of columns -->
-      <div class="row">
+         <div class="row">
         <div class="span4">
           <h2>Anuncios</h2>
-           <p> Enterate de lo que se viene en el FLISOL </p>
-          <p><a class="btn" href="#">más &raquo;</a></p>
+          <p><a href="convocatoria.html">Convocatoria Nacional para organización de sedes del evento FLISOL.</a></p>
+		  <p><a class="btn" href="#">más &raquo;</a></p>
         </div>
         <div class="span4">
           <h2>Enlaces</h2>
-           <p>Aquí encontrarás las fotos, videos y diapositivas.</p>
-          <p><a class="btn" href="#">más &raquo;</a></p>
+           <p><a href="http://www.flisol.info/FLISOL2012/Peru">Flisol.info</a></p>
+		   <p><a class="btn" href="#">más &raquo;</a></p>
        </div>
         <div class="span4">
-        <a hfer="http://apesol.org.pe"><img src="img/apesol.png"></a>
+		<h2>Organizadores</h2>
+		<br>
+        <a href="http://apesol.org.pe"><img src="img/apesol.png"></a>
         </div>
       </div>
 
       <hr>
 
       <footer>
-        <p>&copy; Flisol 2012</p>
-      </footer>
+       <center> <p>&copy; Flisol 2012</p>
+      </center>
+	  </footer>
 
     </div> <!-- /container -->
 
