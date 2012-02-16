@@ -3436,4 +3436,10 @@ float: left;
                 font-size: 60px;
                 font-family: Verdana, sans-serif;
             }
-
+#flecha{
+background:url(../img/facebook_active.png) no-repeat;
+width: 90px;
+height:90px;
+float: left;
+               				
+               }
