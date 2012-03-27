@@ -1,6 +1,6 @@
 function ahah(url, target, delay) {
   var req;
-  document.getElementById(target).innerHTML = 'waiting...';
+  document.getElementById(target).innerHTML = 'Cargando...';
   if (window.XMLHttpRequest) {
     req = new XMLHttpRequest();
   } else if (window.ActiveXObject) {
