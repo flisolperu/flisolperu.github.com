@@ -1,274 +1,527 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
-  <script src="js/jquery.js" type="text/javascript"></script>
-  <script src="js/kkcountdown.min.js" type="text/javascript"></script>
-  <script src="js/bootstrap-carousel.js" type="text/javascript"></script>
-  <script src="js/bootstrap-transition.js" type="text/javascript"></script>
-  
     <meta charset="utf-8">
-    <title>Flisol Perú 2012 - Cultura informática para todos</title>
-    <meta name="description" content="Festival Latinoamericano de Instalación de Software Libre">
-    <meta name="author" content="Coordinación Nacional Flisol Perú 2012 - APESOL">
-
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <title>FLISOL Perú 2013</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Festival LatinoAmericano de Instalación de Software Libre">
+    <meta name="author" content="alemcito <alemcito@gmail.com>">
 
     <!-- Le styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
-	<style type="text/css">
-      body {
-        padding-top: 63px;
-        padding-bottom: 40px;
-      }
-	  #odliczanie-a{
-                font-size: 70px;
-                font-family: Verdana, sans-serif;
-				margin: 0px 0px;
-            }
-            }
-
-      #odliczanie-b{
-                font-size: 18px;
-                font-weight: normal;
-                margin: 40px 0px;
-            }
-    </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/fsl2013.css">
+    <style>
 
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="img/favicon.ico">
-	  
-	 <script type="text/javascript">
-            $(document).ready(function(){
-                $(".kkcount-down-1").kkcountdown({
-                	dayText		: ' día ',
-                	daysText 	: ' días ',
-                    hoursText	: ' h ',
-                    minutesText	: ' m ',
-                    secondsText	: ' s',
-                    displayZeroDays : true,
-                    callback	: test,
-                    oneDayClass	: 'one-day'
-                });
-                $(".kkcount-down").kkcountdown({
-                	dayText		: 'd ',
-                	daysText 	: 'd ',
-                    hoursText	: ':',
-                    minutesText	: ':',
-                    secondsText	: '',
-                    displayZeroDays : false,
-                    callback	: test,
-                    addClass	: 'shadow'
-                });
-            });
-            function test(){
-            	console.log('KONIEC');
-            }
-			
-			$(function () {
-    //    $('.carousel').carousel({ interval: 2000 })
+    /* GLOBAL STYLES
+    -------------------------------------------------- */
+    /* Padding below the footer and lighter body text */
 
-        $('#myCarousel').carousel()
-            });
-			
-        </script>
+    body {
+      padding-bottom: 40px;
+      color: #5a5a5a;
+    }
 
+
+
+    /* CUSTOMIZE THE NAVBAR
+    -------------------------------------------------- */
+
+    /* Special class on .container surrounding .navbar, used for positioning it into place. */
+    .navbar-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      margin-top: 20px;
+      margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+    }
+    .navbar-wrapper .navbar {
+
+    }
+
+    /* Remove border and change up box shadow for more contrast */
+    .navbar .navbar-inner {
+      border: 0;
+      -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+         -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+              box-shadow: 0 2px 10px rgba(0,0,0,.25);
+    }
+
+    /* Downsize the brand/project name a bit */
+    .navbar .brand {
+      padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+      font-size: 16px;
+      font-weight: bold;
+      text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    }
+
+    /* Navbar links: increase padding for taller navbar */
+    .navbar .nav > li > a {
+      padding: 15px 20px;
+    }
+
+    /* Offset the responsive button for proper vertical alignment */
+    .navbar .btn-navbar {
+      margin-top: 10px;
+    }
+
+
+
+    /* CUSTOMIZE THE CAROUSEL
+    -------------------------------------------------- */
+
+    /* Carousel base class */
+    .carousel {
+      margin-bottom: 60px;
+    }
+
+    .carousel .container {
+      position: relative;
+      z-index: 9;
+    }
+
+    .carousel-control {
+      height: 80px;
+      margin-top: 0;
+      font-size: 120px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      background-color: transparent;
+      border: 0;
+      z-index: 10;
+    }
+
+    .carousel .item {
+      height: 500px;
+    }
+    .carousel img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 500px;
+    }
+
+    .carousel-caption {
+      background-color: transparent;
+      position: static;
+      max-width: 550px;
+      padding: 0 20px;
+      margin-top: 200px;
+    }
+    .carousel-caption h1,
+    .carousel-caption .lead {
+      margin: 0;
+      line-height: 1.25;
+      color: #fff;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    }
+    .carousel-caption .btn {
+      margin-top: 10px;
+    }
+
+
+
+    /* MARKETING CONTENT
+    -------------------------------------------------- */
+
+    /* Center align the text within the three columns below the carousel */
+    .marketing .span4 {
+      text-align: center;
+    }
+    .marketing h2 {
+      font-weight: normal;
+    }
+    .marketing .span4 p {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+
+    /* Featurettes
+    ------------------------- */
+
+    .featurette-divider {
+      margin: 80px 0; /* Space out the Bootstrap <hr> more */
+    }
+    .featurette {
+      padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+      overflow: hidden; /* Vertically center images part 2: clear their floats. */
+    }
+    .featurette-image {
+      margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+    }
+
+    /* Give some space on the sides of the floated elements so text doesn't run right into it. */
+    .featurette-image.pull-left {
+      margin-right: 40px;
+    }
+    .featurette-image.pull-right {
+      margin-left: 40px;
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-size: 50px;
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+
+
+    /* RESPONSIVE CSS
+    -------------------------------------------------- */
+
+    @media (max-width: 979px) {
+
+      .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+      }
+      .navbar-inner {
+        border-radius: 0;
+        margin: -20px 0;
+      }
+
+      .carousel .item {
+        height: 500px;
+      }
+      .carousel img {
+        width: auto;
+        height: 500px;
+      }
+
+      .featurette {
+        height: auto;
+        padding: 0;
+      }
+      .featurette-image.pull-left,
+      .featurette-image.pull-right {
+        display: block;
+        float: none;
+        max-width: 40%;
+        margin: 0 auto 20px;
+      }
+    }
+
+
+    @media (max-width: 767px) {
+
+      .navbar-inner {
+        margin: -20px;
+      }
+
+      .carousel {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+      .carousel .container {
+
+      }
+      .carousel .item {
+        height: 300px;
+      }
+      .carousel img {
+        height: 300px;
+      }
+      .carousel-caption {
+        width: 65%;
+        padding: 0 70px;
+        margin-top: 100px;
+      }
+      .carousel-caption h1 {
+        font-size: 30px;
+      }
+      .carousel-caption .lead,
+      .carousel-caption .btn {
+        font-size: 18px;
+      }
+
+      .marketing .span4 + .span4 {
+        margin-top: 40px;
+      }
+
+      .featurette-heading {
+        font-size: 30px;
+      }
+      .featurette .lead {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+    }
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="ico/favicon.png">
+                                   <script>
+      var futuro = new Date (2013,4,27,9,0);
+      var actualiza = 1000;
+      function faltan(){
+      var ahora = new Date();
+      var faltan = futuro - ahora;
+      if (faltan > 0){
+        var segundos = Math.round(faltan/1000);
+        var minutos = Math.floor(segundos/60);
+        var segundos_s = segundos%60;
+        var horas = Math.floor(minutos/60);
+        var minutos_s = minutos%60;
+        var dias = Math.floor(horas/24);
+        var horas_s = horas%24;
+        document.formulario.dias.value= dias;
+        document.formulario.horas_s.value= horas_s;
+        document.formulario.minutos_s.value= minutos_s;
+        document.formulario.segundos_s.value= segundos_s;
+        setTimeout("faltan()",actualiza);
+      } else {
+        document.formulario.dias.value= 0;
+        document.formulario.horas_s.value= 0;
+        document.formulario.minutos_s.value= 0;
+        document.formulario.segundos_s.value= 0;
+      return true;
+      }}
+    </script>
   </head>
 
-  <body>
-  <!--// scrip de facebook-->
-  
-  <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=158644650872485";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-  <div class="navbar navbar-fixed-top" data-toggle="collapse" data-target=".nav-collapse">
-  <div class="navbar-inner">
-<div class="container">
-
-	<ul class="nav">
-		<li><a href="index.html" style="color:white" class="brand" rel="tag">Flisol Perú 2012</a></li>
-	<li><a href="que.html">¿Qué es FLISOL?</a></li>	 
-	<li class="dropdown">
-		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Flisol PERÚ 2012<b class="caret"></b></a>
-		<ul class="dropdown-menu">
-			<li><a href="flisol2012.html"rel="tag">Flisol Perú 2012</a></li>
-			<li><a href="prensa.html">Nota de prensa</a></li>
-			<li><a href="botones.html">Botones</a></li>
-			<li><a href="patrocinio.html">Patrocinio</a></li>
-			<li><a href="voluntario.html">Súmate como voluntario</a></li>
-			<li><a href="guiaflisol.html">Guía de organización</a></li>
-		</ul>
-	</li>
-	<li class="dropdown">
-		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Ciudades<b class="caret"></b></a>
-		<ul class="dropdown-menu">
-			<li><a href="convocatoria.html">Convocatoria   <span class="label label-info">Info</span></a></li>  
-			<li><a href="sedes/abancay.html">Abancay</a></li>
-			<li><a href="sedes/arequipa.html">Arequipa</a></li>
-                        <li><a href="sedes/ayacucho.html">Ayacucho</a></li>
-			<li><a href="sedes/callao.html">Callao</a></li>
-			<li><a href="sedes/chiclayo.html">Chiclayo</a></li>
-			<li><a href="sedes/chimbote.html">Chimbote</a></li>
-			<li><a href="sedes/cusco.html">Cusco</a></li>
-			<li><a href="sedes/guadalupe.html">Guadalupe</a></li>
-			<li><a href="sedes/huancayo.html">Huancayo</a></li>
-			<li><a href="sedes/ica.html">Ica</a></li>
-			<li><a href="sedes/ilo.html">Ilo</a></li>
-			<li><a href="sedes/iquitos.html">Iquitos</a></li>
-			<li><a href="sedes/limanorte.html">Lima Norte</a></li>
-			<li><a href="sedes/pasco.html">Pasco</a></li>
-			<li><a href="sedes/piura.html">Piura</a></li>
-			<li><a href="sedes/pucallpa.html">Pucallpa</a></li>
-			<li><a href="sedes/puno.html">Puno</a></li>
-			<li><a href="sedes/tacna.html">Tacna</a></li>
-			<li><a href="sedes/trujillo.html">Trujillo</a></li>
-		</ul>	
-	</li>
-	<ul class="nav">
-		<li><a href="galeria.html">¿Tienes fotos del FLISOL?</a></li>	  
-		<span class="label label-important">Importante</span>  
-	</ul>
-  </div>
-</div>
-</div>
-
-  
- 
-<div class="tab-content">
-  
-  
-  <div class="tab-pane" id="messages">...</div>
-  <div class="tab-pane" id="settings">...</div>
-</div>
- 
+  <body onload="faltan()">
 
 
-    <div class="container">
-		<!--Cuadro flotante de redes sociales y me gusta en face etc-->
-		<div class="tab-content">
-		<div class="tab-pane active" id="home">
-			
-      <!-- Main hero unit for a primary marketing message or call to action -->
-      <div class="hero-unit">
-	   <div id="myCarousel" class="carousel slide">
-            <div class="carousel-inner">
-		<div class="item active">
-				<center>
-                <img src="img/flisolperu2012_graficoweb1.png" alt="" ></center>
-				<div class="carousel-caption">
-				<h4>Cultura informática para todos</h4>
-					<p><a href="prensa.html">Nota de prensa del FLISOL PERÚ 2012.</a></p>
-					<!-- <p><a class="btn btn-primary btn-large" href="convocatoria.html">más &raquo;</a></p>-->
-        		        </div>
-	        </div>
-		<div class="item">
-                                <center>
-                <img src="img/flisolperu2012_graficoweb2.png" alt="" ></center>
-                                <div class="carousel-caption">
-                                <h4>¡Estamos en la recta final!</h4>
-				<p>Sólo faltan <span time="1335621600" class="kkcount-down-1"></span> para el Flisol Perú 2012. ¿Qué esperas?</p>
-		                </div>
-	        </div>
-		<div class="item">
-                                <center>
-                <img src="img/flisolperu2012_graficoweb3.png" alt="" ></center>
-                                <div class="carousel-caption">
-                                <h4>Prepárate para el Flisol Perú 2012</h4>
-                                        <p>Síguenos en  <a href="https://www.facebook.com/flisolperu">Facebook</a>, <a href="https://www.youtube.com/user/flisolperu">Youtube</a> y en Twitter con los hashtags #FlisolPeru y #FlisolPone.</p>
-                                        <!-- <p><a class="btn btn-primary btn-large" href="convocatoria.html">más &raquo;</a></p>-->
-                		</div>
-        	</div>
-	</div>
-  <!-- Carousel nav -->
-  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-	  
-	  </div>
-	  
-  
-	  </div>
-	</div>
-      <!-- Example row of columns -->
+
+    <!-- NAVBAR
+    ================================================== -->
+    <div class="navbar-wrapper">
+      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+      <div class="container">
+
+        <div class="navbar navbar-inverse">
+          <div class="navbar-inner">
+            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="#">FLISOL Perú 2013</a>
+            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li><a href="quees.html">¿Qué es el FLISOL?</a></li>
+                 <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">FLISOL 2013<b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="flisol2013.html">FLISOL Perú 2013</a></li>
+                    <li><a href="notaprensa.html">Nota de Prensa</a></li>
+                    <li><a href="patrocinio.html">Patrocinio</a></li>
+                    <li><a href="voluntario.html">Súmate como Voluntario</a></li>
+                    <li><a href="guia.html">Guia de organización</a></li>
+                  </ul>
+                </li>
+                <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ciudades <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="abancay.html">Abancay</a></li>
+                    <li><a href="andahuaylas.html">Andahuaylas</a></li>
+                    <li><a href="cerrodepasco.html">Cerro de Pasco</a></li>
+                    <li><a href="huancayo.html">Huancayo</a></li>
+                    <li><a href="ica.html">Ica</a></li>
+                    <li><a href="ilo.html">Ilo</a></li>
+                    <li><a href="iquitos.html">Iquitos</a></li>
+                    <li><a href="juliaca.html">Juliaca</a></li>
+                    <li><a href="limanorte.html">Lima-Norte</a></li>
+                    <li><a href="puno.html">Puno</a></li>
+                    <li><a href="tacna.html">Tacna</a></li>
+                    <li><a href="trujillo.html">Trujillo</a></li>
+                  </ul>
+                </li>
+                <li><a href="descargas.html">Descargas</a></li>
+                <li><a href="contactos.html">Contáctanos</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div><!-- /.navbar-inner -->
+        </div><!-- /.navbar -->
+
+      </div> <!-- /.container -->
+    </div><!-- /.navbar-wrapper -->
+
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="img/examples/slide-01.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="img/examples/slide-02.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Afiche nacional FLISOL PERÚ 2013.</h1>
+              <p class="lead">Este es el afiche naciona para el FISOL PERÚ 2013, créditos "Fabian Orccón Chipana"</p>
+              <a class="btn btn-large btn-primary" href="#">Descárgalo AQUI</a>
+              <p>Descarga el vectorial <a href="#">AQUI</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/examples/slide-03.jpg" alt="">
+          <div class="container">
+            <div class="carousel-caption" style="position:absolute; top:260px; left: 200px">
+              <p class="lead"><a href="" target="_blank">FACEBOOK</a> · <a href="http://www.youtube.com/flisolperu0
+                " target="_blank">YOUTUBE</a> · <a href="#" target="_blank">GOOGLE +</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div><!-- /.carousel -->
+
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
       <div class="row">
-      <div class="span6">
-	  <h1>FLISOL PERÚ 2012</h1>
-	<h2>Sábado 28 de abril de 2012, 9am</h2>
-<p>Perú ha sido parte de FLISOL desde sus inicios en 2005. Desde entonces, el número de sedes en Lima y el interior del país ha crecido gracias al apoyo de grupos de entusiastas, universidades y empresas en diversos puntos del país. En 2012 FLISOL se realizará en 19 sedes repartidas a lo largo del territorio peruano.</p>
+        <div class="span8">
+          <h1>FLISOL PERÚ 2013</h1>
+          <h3>Sábado 27 de Abril del 2013, 9:00 am</h3>
+          <p>Perú ha sido parte de FLISOL desde sus inicios en 2005. Desde entonces, el número de sedes en Lima y el interior del país ha crecido gracias al apoyo de grupos de entusiastas, universidades y empresas en diversos puntos del país. En 2012 FLISOL se realizará en 19 sedes repartidas a lo largo del territorio peruano.</p><br>
+          <div class="span7" style="width:100%">
+          <form name="formulario">  
+            <h4>CountDown para el <strong>FLISOL PERÚ 2013</strong></h4>
+              <input type="text" readonly name="dias" value="" id="cont2ax"> Días&nbsp;&nbsp;<input type="text" name="horas_s"  readonly value="" id="cont2ax"> Horas&nbsp;&nbsp;<input type="text" name="minutos_s" value="" readonly id="cont2ax"> Minutos <input type="text" name="segundos_s" readonly value="" id="cont2ax"> Segundos
+        </form>
+        </div>
+        <div class="row">
+          <h5>FLISOL PERÚ 2012 - LIMA NORTE</h5>
+          <div class="span3"><img src="img/serial/serial1.jpg"></div>
+          <div class="span3"><img src="img/serial/serial2.jpg"></div>
+          <div class="span3"><img src="img/serial/serial3.jpg"></div>
+          <div class="span3"><img src="img/serial/serial4.jpg"></div>
+          <div class="span3"><img src="img/serial/serial5.jpg"></div>
+          <div class="span3"><img src="img/serial/serial6.jpg"></div>
+        </div>
+        </div><!-- /.span4 -->
+        <div class="span3" style="margin:0 auto;">
+          <iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fflisolperu&amp;width=300&amp;height=590&amp;show_faces=true&amp;colorscheme=light&amp;stream=true&amp;border_color&amp;header=true&amp;appId=140392232666416" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:590px;" allowTransparency="true"></iframe><br>
 
-<div style="text-align:center;margin:auto;">
-<ul class="thumbnails">
-	<li class="span2">
-		<img src="img/tb/tn_foto09.jpg" alt="">
-	</li>
-	<li class="span2">
-		<img src="img/tb/tn_foto04.jpg" alt="">
-	</li>
-	<li class="span2">
-		<img src="img/tb/tn_foto08.jpg" alt="">
-	</li>
-	<li class="span2">
-		<img src="img/tb/tn_foto02.jpg" alt="">
-	</li>
-	<li class="span2">
-		<img src="img/tb/tn_foto03.jpg" alt="">
-	</li>
-	<li class="span2">
-		<img src="img/tb/tn_foto05.jpg" alt="">
-	</li>
-	<li class="span2">
-		<img src="img/tb/tn_foto06.jpg" alt="">
-	</li>
-	<li class="span2">
-		<img src="img/tb/tn_foto05.jpg" alt="">
-	</li>
-	<li class="span2">
-		<img src="img/tb/tn_foto01.jpg" alt="">
-	</li>
-</ul>
+          <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'search',
+  search: '#flisolperu2013',
+  rpp: 30,
+  interval: 5000,
+  title: 'Actualización',
+  subject: '#FLISOLPERU2013',
+  width: 300,
+  height: 300,
+  theme: {
+    shell: {
+      background: '#8ec1da',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#000000',
+      links: '#1985b5'
+    }
+  },
+  features: {
+    scrollbar: true,
+    loop: true,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: true,
+    toptweets: true,
+    behavior: 'all'
+  }
+}).render().start();
+</script>
+        </div><!-- /.span4 -->
+      </div><!-- /.row --><br>
+<div class="span11" style="text-align:justify;" >
+El público asistente al FLISOL tendrá la oportunidad de instalar software libre en sus computadoras, laptops y USBs, con lo cual podrán probar que es una alternativa real y segura a modelos de desarrollo y distribución de software tradicionales; se informará sobre la filosofía, cultura y organización alrededor del software libre, y además conocerá las experiencias, desarrollos e investigaciones de grupos y entidades en torno al tema, tanto a nivel local como nacional e internacional.
+<br><br>
+Como complemento a las instalaciones, cada sede del FLISOL en la capital y en ciudades del interior del país contará con otros espacios para charlas, talleres sobre tecnologías abiertas, y muchas actividades más.
+<br><br>
+Este año el evento se realizará en 12 ciudades del país (hasta el momento): Abancay, Andahuaylas, Cerro de Pasco, Huancayo, Ica, Ilo, Iquitos, Juliaca, Lima-Norte, Puno, Tacna y Trujillo.
 </div>
+<br>
+      <!-- START THE FEATURETTES -->
 
-<p>El público asistente al FLISOL tendrá la oportunidad de instalar software libre en sus <strong>computadoras, laptops y USBs</strong>, con lo cual podrán probar que es una alternativa real y segura a modelos de desarrollo y distribución de software tradicionales; se informará sobre la filosofía, cultura y organización alrededor del software libre, y además <strong>conocerá las experiencias, desarrollos e investigaciones de grupos y entidades en torno al tema</strong>, tanto a nivel local como nacional e internacional.</p>
+  
+      <hr class="featurette-divider" >
+      <!-- /END THE FEATURETTES -->
+<!-- Three columns of text below the carousel -->
+<h2>ORGANIZA</h2>
+      <div class="row">
+        <div class="span4">
+          <img src="img/cosolig.png" alt="">
+          <h2>COSOLIG</h2>
+          <p>La Comunidad de Software Libre Garcilasina - COSOSLIG tiene como misión Difundir del software libre, con el fin de generar y compartir conocimiento con la comunidad académica y de software, por medio de ayuda, capacitación y desarrollo, asimismo COSOLIG es un espacio para la formación integral y profesional de sus integrantes.</p>
+          <p><a class="btn" href="http://www.cosolig.org/acercade/" target="_blank">Ver  detalles &raquo;</a></p>
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <img src="img/ubuntu.png" alt="">
+          <h2>UBUNTU PERÚ</h2>
+          <p>Ubuntu-pe es la comunidad de usuarios de Ubuntu en Perú, creada para ayudarnos entre nosotros, resolver problemas, dudas, compartir intereses, crear nuevos proyectos, etc. Está formada por voluntarios que comparten una pasión común hacia el software libre, creemos en esta distribución y cumplimos con el mensaje que transmite: "humanidad hacia otros".</p>
+          <p><a class="btn" href="https://wiki.ubuntu.com/PeruvianTeam" target="_blank">Ver  detalles &raquo;</a></p>
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <img src="img/apesol.png" alt="">
+          <h2>APESOL</h2>
+          <p>La Asociación Peruana de Software Libre - APESOL nace como un esfuerzo para desarrollar una sólida, abierta, democrática y participativa comunidad de usuarios, desarrolladores y activistas del software libre en el Perú.</p>
+          <p><a class="btn" href="http://www.apesol.org.pe/nosotros" target="_blank">Ver  detalles &raquo;</a></p>
+        </div><!-- /.span4 -->
+      </div><!-- /.row -->
 
-<p>Como complemento a las instalaciones, cada sede del FLISOL en la capital y en ciudades del interior del país contará con otros espacios para charlas, talleres sobre tecnologías abiertas, y muchas actividades más.</p>
+<hr>
+<h2>AUPICIAN</h2>
+      <div class="row">
+        <div class="span4">
+          <a href="http://www.ucss.edu.pe" target="_blank"><img src="img/ucss.png" alt=""></a>
+        </div><!-- /.span4 -->
+        <div class="span4">
+          <a href="http://instituto.continental.edu.pe" target="_blank"><img src="img/continental.png" alt=""></a>
+        </div><!-- /.span4 -->
+      </div><!-- /.row -->
 
-<p>Este año el evento se realizará en 19 ciudades del país: Abancay, Arequipa, Ayacucho, Callao, Chiclayo, Chimbote, Cusco, Guadalupe (La Libertad), Huancayo, Ica, Ilo, Iquitos, Lima Norte (Comas), Pasco, Piura, Pucallpa, Puno, Tacna y Trujillo.</p>
-<p>
-<h3>Flisol Perú 2012</h3>
-<h4>Coordinación Nacional</h4>
-</p>
-	  </div>
-	  <div class="span5 offset1">
-	  <iframe src="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fflisolperu&amp;width=350&amp;height=500&amp;colorscheme=light&amp;show_faces=true&amp;border_color=%2308C&amp;stream=true&amp;header=true&amp;appId=158644650872485" scrolling="yes" frameborder="0" style="border:none; overflow:hidden; width:350px; height:500px;" allowTransparency="true"></iframe>
-	<p><br> </p>
-	<h2>Organizador Nacional</h2>
-	<a href="http://apesol.org.pe"><img src="img/apesol.png"></a>
-	<hr>
-	<h2>Auspiciadores Nacionales</h2>
-	<a href="http://www.instituto.continental.edu.pe"><img src="img/icontinental.jpg"></a>
-	<a href="http://mozilla.pe"><img src="img/mozillaperu.png"></a>
-	</div>
-</div>
-
-      <hr>
-
+<hr>
+      <!-- FOOTER -->
       <footer>
-	<div style="float:left;margin: 0 10px 0 0;">
-		<a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a>
-		<a rel="license" href="http://www.gnu.org/licenses/gpl-3.0.html"><img alt="Licencia GPLv3" style="border-width:0" src="img/gplv3.png" height="31" width="88" /></a>
-	</div>
-	<p>El contenido de la web está bajo la licencia de Creative Commons Reconocimiento-CompartirIgual 3.0 Unported.
-	<br>El código fuente de esta página está disponible en <a href="https://github.com/flisolperu/flisolperu.github.com">GitHub</a> bajo la GNU Public License 3.0.</p>
+        <div style="float:left;margin: 0 10px 0 0;">
+          <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a>
+          <a rel="license" href="http://www.gnu.org/licenses/gpl-3.0.html"><img alt="Licencia GPLv3" style="border-width:0" src="img/gplv3.png" height="31" width="88" /></a>
+        </div>
+        <p>El contenido de la web está bajo la licencia de Creative Commons Reconocimiento-CompartirIgual 3.0 Unported.
+          <br>El código fuente de esta página está disponible en <a href="https://github.com/flisolperu/flisolperu.github.com">GitHub</a> bajo la GNU Public License 3.0.</p>
       </footer>
-    </div> <!-- /container -->
+
+
+    </div>
+
+    </div><!-- /.container -->
+
+
 
     <!-- Le javascript
     ================================================== -->
@@ -284,12 +537,16 @@
     <script src="js/bootstrap-popover.js"></script>
     <script src="js/bootstrap-button.js"></script>
     <script src="js/bootstrap-collapse.js"></script>
-
+    <script src="js/bootstrap-carousel.js"></script>
     <script src="js/bootstrap-typeahead.js"></script>
-	<script src="js/jquery.js" type="text/javascript"></script>
-    <script src="js/kkcountdown.min.js" type="text/javascript"></script>
-	
-	
+    <script>
+      !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+    </script>
+    <script src="js/holder/holder.js"></script>
   </body>
-<head><meta http-equiv="pragma" content="no-cache"></head>
 </html>
