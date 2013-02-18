@@ -312,11 +312,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-<<<<<<< HEAD
-            <a class="brand" href="#">FLISOL Perú 2013</a>
-=======
             <a class="brand" href="http://flisol.pe">FLISOL Perú 2013</a>
->>>>>>> 90e08b39b7615482dddd240af45f543db99d79f8
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
             <div class="nav-collapse collapse">
               <ul class="nav">
@@ -373,11 +369,7 @@
         <div class="span6">
           <h1>Cerro de Pasco (Pasco)</h1>
           <h3>Lugar</h3>
-<<<<<<< HEAD
-          <p>Sistemas y Computacion (Undac)</p>
-=======
           <p>AV. Los Proceres S/N</p>
->>>>>>> 90e08b39b7615482dddd240af45f543db99d79f8
           <h3>Áreas del evento</h3>
           <p>
             <ul>
