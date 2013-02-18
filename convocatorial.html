@@ -2,10 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>FLISOL Perú 2013</title>
+    <title>FLISOL Perú 2013 &raquo; II Convocatoria</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Festival LatinoAmericano de Instalación de Software Libre">
     <meta name="author" content="alemcito <alemcito@gmail.com>">
+
     <!-- Le styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
@@ -264,29 +265,12 @@
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
                     <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
                                    <link rel="shortcut icon" href="ico/favicon.png">
-                                   <script>   
+                                   <script>
       var futuro = new Date (2013,4,27,9,0);
       var actualiza = 1000;
       function faltan(){
-         $("#myModal").on("show", function() { // wire up the OK button to dismiss the modal when shown
-             $("#myModal a.btn").on("click", function(e) {
-               console.log("button pressed"); // just as an example...
-               $("#myModal").modal('hide'); // dismiss the dialog
-             });
-          });
-           $("#myModal").on("hide", function() { // remove the event listeners when the dialog is dismissed
-             $("#myModal a.btn").off("click");
-           });
-           $("#myModal").on("hidden", function() { // remove the actual elements from the DOM when fully hidden
-             $("#myModal").remove();
-           });
-           $("#myModal").modal({ // wire up the actual modal functionality and show the dialog
-             "backdrop" : "static",
-             "keyboard" : true,
-             "show" : true // ensure the modal is shown immediately
-           });
       var ahora = new Date();
-      var faltan = futuro - ahora;
+      var faltan = futuro</li><li>ahora;
       if (faltan > 0){
         var segundos = Math.round(faltan/1000);
         var minutos = Math.floor(segundos/60);
@@ -310,22 +294,9 @@
     </script>
   </head>
 
-  <body onload="faltan()"> 
-    <!-- Modal -->
-    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel">Segunda Convocatoria Nacional</h3>
-    </div>
-    <div class="modal-body">
-    <p><p style="float:left; padding-right:7px;"><img src="img/fp2013middle.png" alt=""></p>La coordinación nacional lanza la segunda convocatoria nacional para expresiones de sede a realizarse <strong> del 19 de Febrero del 2013 al 26 de Febrero del 2013.</strong> </p>
-    <br>
-    <strong>Sedes faltantes:<br>Amazonas - Áncash - Arequipa - Ayacucho - Callao - Cajamarca - Cusco - Huancavelica - Huánuco  - Lambayeque - Madre de Dios - Piura - San Martín - Tumbes - Ucayali</strong>
-    </div>
-    <div class="modal-footer">
-      <a class="btn" href="convocatorial.html" >Mas Info &rsaquo;</a>
-    </div>
-    </div>
+  <body>
+
+
 
     <!-- NAVBAR
     ================================================== -->
@@ -346,7 +317,7 @@
             <div class="nav-collapse collapse">
               <ul class="nav">
                 <li><a href="quees.html">¿Qué es el FLISOL?</a></li>
-                 <li class="dropdown">
+                 <li class="dropdown active">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">FLISOL 2013<b class="caret"></b></a>
                   <ul class="dropdown-menu">
                     <li><a href="flisol2013.html">FLISOL Perú 2013</a></li>
@@ -380,43 +351,9 @@
             </div><!--/.nav-collapse -->
           </div><!-- /.navbar-inner -->
         </div><!-- /.navbar -->
-
       </div> <!-- /.container -->
     </div><!-- /.navbar-wrapper -->
 
-
-
-    <!-- Carousel
-    ================================================== -->
-    <div id="myCarousel" class="carousel slide">
-      <div class="carousel-inner">
-        <div class="item active">
-          <img src="img/examples/slide-01.jpg" alt="">
-        </div>
-        <div class="item">
-          <img src="img/examples/slide-02.jpg" alt="">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Afiche nacional FLISOL PERÚ 2013.</h1>
-              <p class="lead">Este es el afiche naciona para el FISOL PERÚ 2013, créditos "Fabian Orccón Chipana"</p>
-              <a class="btn btn-large btn-primary" href="#">Descárgalo AQUI</a>
-              <p>Descarga el vectorial <a href="#">AQUI</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="img/examples/slide-03.jpg" alt="">
-          <div class="container">
-            <div class="carousel-caption" style="position:absolute; top:260px; left: 200px">
-              <p class="lead"><a href="" target="_blank">FACEBOOK</a> · <a href="http://www.youtube.com/flisolperu0
-                " target="_blank">YOUTUBE</a> · <a href="#" target="_blank">GOOGLE +</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-    </div><!-- /.carousel -->
 
 
 
@@ -427,78 +364,38 @@
     <div class="container marketing">
 
       <div class="row">
-        <div class="span8">
-          <h1>FLISOL PERÚ 2013</h1>
-          <h3>Sábado 27 de Abril del 2013, 9:00 am</h3>
-          <p>Perú ha sido parte de FLISOL desde sus inicios en 2005. Desde entonces, el número de sedes en Lima y el interior del país ha crecido gracias al apoyo de grupos de entusiastas, universidades y empresas en diversos puntos del país. En 2012 FLISOL se realizará en 19 sedes repartidas a lo largo del territorio peruano.</p><br>
-          <div class="span7" style="width:100%">
-          <form name="formulario">  
-            <h4>CountDown para el <strong>FLISOL PERÚ 2013</strong></h4>
-              <input type="text" readonly name="dias" value="" id="cont2ax"> Días&nbsp;&nbsp;<input type="text" name="horas_s"  readonly value="" id="cont2ax"> Horas&nbsp;&nbsp;<input type="text" name="minutos_s" value="" readonly id="cont2ax"> Minutos <input type="text" name="segundos_s" readonly value="" id="cont2ax"> Segundos
-        </form>
-        </div>
+        <div class="span12"><br><br><br><br></div>
+        <div class="span1"></div>
+       <div class="span12">
         <div class="row">
-          <h5>FLISOL PERÚ 2012 - LIMA NORTE</h5>
-          <div class="span3"><img src="img/serial/serial1.jpg"></div>
-          <div class="span3"><img src="img/serial/serial2.jpg"></div>
-          <div class="span3"><img src="img/serial/serial3.jpg"></div>
-          <div class="span3"><img src="img/serial/serial4.jpg"></div>
-          <div class="span3"><img src="img/serial/serial5.jpg"></div>
-          <div class="span3"><img src="img/serial/serial6.jpg"></div>
-        </div>
-        </div><!-- /.span4 -->
-        <div class="span3" style="margin:0 auto;">
-          <iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fflisolperu&amp;width=300&amp;height=590&amp;show_faces=true&amp;colorscheme=light&amp;stream=true&amp;border_color&amp;header=true&amp;appId=140392232666416" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:590px;" allowTransparency="true"></iframe><br>
-
-          <script src="http://widgets.twimg.com/j/2/widget.js"></script>
-<script>
-new TWTR.Widget({
-  version: 2,
-  type: 'search',
-  search: '#flisolperu2013',
-  rpp: 30,
-  interval: 5000,
-  title: 'Actualización',
-  subject: '#FLISOLPERU2013',
-  width: 300,
-  height: 300,
-  theme: {
-    shell: {
-      background: '#8ec1da',
-      color: '#ffffff'
-    },
-    tweets: {
-      background: '#ffffff',
-      color: '#000000',
-      links: '#1985b5'
-    }
-  },
-  features: {
-    scrollbar: true,
-    loop: true,
-    live: true,
-    hashtags: true,
-    timestamp: true,
-    avatars: true,
-    toptweets: true,
-    behavior: 'all'
-  }
-}).render().start();
-</script>
-        </div><!-- /.span4 -->
-      </div><!-- /.row --><br>
-<div class="span11" style="text-align:justify;" >
-
-El público asistente al FLISOL tendrá la oportunidad de instalar software libre en sus computadoras, laptops y USBs, con lo cual podrán probar que es una alternativa real y segura a modelos de desarrollo y distribución de software tradicionales; se informará sobre la filosofía, cultura y organización alrededor del software libre, y además conocerá las experiencias, desarrollos e investigaciones de grupos y entidades en torno al tema, tanto a nivel local como nacional e internacional.
-<br><br>
-Como complemento a las instalaciones, cada sede del FLISOL en la capital y en ciudades del interior del país contará con otros espacios para charlas, talleres sobre tecnologías abiertas, y muchas actividades más.
-<br><br>
-Este año el evento se realizará en 12 ciudades del país (hasta el momento): Abancay, Andahuaylas, Cerro de Pasco, Huancayo, Ica, Ilo, Iquitos, Juliaca, Lima-Norte, Puno, Tacna y Trujillo.
-</div>
+          <div class="span12">
+            <p>La Coordinación Nacional FLISOL PERÚ 2013 anuncia la segunda Convocatoria Nacional para organización de sedes. La presente convocatoria está dirigida a comunidades de software libre ubicadas en el territorio peruano, que tengan interés y la intención de coordinar la realización de un Festival de Instalación de Software Libre en el área geográfica donde tienen influencia.</p>
 <br>
-      <!-- START THE FEATURETTES -->
-
+<p>Todos los detalles de la convocatoria se encuentran en:</p>
+  <ul>
+    <li><a href="http://bit.ly/YuvjjY">http://bit.ly/YuvjjY</a></li>
+</ul>
+<p>Asimismo, el formato de expresión de interés de sede:</p>
+<ul>
+<li><a href="http://bit.ly/X34dxT">http://bit.ly/X34dxT</a></li>
+</ul>
   
+<strong>Fechas importantes</strong>
+
+<ul>
+    <li>Recepción de propuestas: Del 18 de Febrero del 2013 al 26 de Febrero del 2013</li>
+    <li>Publicación de propuestas aceptadas: Jueves  28 de febrero de 2013</li>
+    <li>Fecha del FLISOL 2013: 27 de abril de 2013</li>
+</ul>
+<p><strong>Sedes Faltantes:</strong>
+<ul>
+<li>Amazonas</li><li>Ancash</li><li>Arequipa</li><li>Ayacucho</li><li>Callao</li><li>Cajamarca</li><li>Cusco</li><li>Huancavelica</li><li>Huánuco </li><li>Lambayeque</li><li>Madre de Dios</li><li>Piura</li><li>San Martín</li><li>Tumbes</li><li>Ucayali</li></ul>
+</p>
+          </div>
+        </div>
+       </div>
+        </div><!-- /.row -->
+      <!-- START THE FEATURETTES -->
       <hr class="featurette-divider" >
       <!-- /END THE FEATURETTES -->
 <!-- Three columns of text below the carousel -->
@@ -507,7 +404,7 @@ Este año el evento se realizará en 12 ciudades del país (hasta el momento): A
         <div class="span4">
           <img src="img/cosolig.png" alt="">
           <h2>COSOLIG</h2>
-          <p>La Comunidad de Software Libre Garcilasina - COSOSLIG tiene como misión Difundir del software libre, con el fin de generar y compartir conocimiento con la comunidad académica y de software, por medio de ayuda, capacitación y desarrollo, asimismo COSOLIG es un espacio para la formación integral y profesional de sus integrantes.</p>
+          <p>La Comunidad de Software Libre Garcilasina</li><li>COSOSLIG tiene como misión Difundir del software libre, con el fin de generar y compartir conocimiento con la comunidad académica y de software, por medio de ayuda, capacitación y desarrollo, asimismo COSOLIG es un espacio para la formación integral y profesional de sus integrantes.</p>
           <p><a class="btn" href="http://www.cosolig.org/acercade/" target="_blank">Ver  detalles &raquo;</a></p>
         </div><!-- /.span4 -->
         <div class="span4">
@@ -519,7 +416,7 @@ Este año el evento se realizará en 12 ciudades del país (hasta el momento): A
         <div class="span4">
           <img src="img/apesol.png" alt="">
           <h2>APESOL</h2>
-          <p>La Asociación Peruana de Software Libre - APESOL nace como un esfuerzo para desarrollar una sólida, abierta, democrática y participativa comunidad de usuarios, desarrolladores y activistas del software libre en el Perú.</p>
+          <p>La Asociación Peruana de Software Libre</li><li>APESOL nace como un esfuerzo para desarrollar una sólida, abierta, democrática y participativa comunidad de usuarios, desarrolladores y activistas del software libre en el Perú.</p>
           <p><a class="btn" href="http://www.apesol.org.pe/nosotros" target="_blank">Ver  detalles &raquo;</a></p>
         </div><!-- /.span4 -->
       </div><!-- /.row -->
@@ -533,7 +430,7 @@ Este año el evento se realizará en 12 ciudades del país (hasta el momento): A
         <div class="span4">
           <a href="http://instituto.continental.edu.pe" target="_blank"><img src="img/continental.png" alt=""></a>
         </div><!-- /.span4 -->
-        <div class="span4">
+         <div class="span4">
           <a href="http://mozilla.pe/" target="_blank"><img src="img/mozilla.png" alt=""></a>
         </div><!-- /.span4 -->
       </div><!-- /.row -->
