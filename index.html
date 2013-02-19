@@ -264,10 +264,27 @@
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
                     <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
                                    <link rel="shortcut icon" href="ico/favicon.png">
-                                   <script>
+                                   <script>   
       var futuro = new Date (2013,4,27,9,0);
       var actualiza = 1000;
       function faltan(){
+        $("#myModal").on("show", function() { // wire up the OK button to dismiss the modal when shown
+          $("#myModal a.btn").on("click", function(e) {
+            console.log("button pressed"); // just as an example...
+            $("#myModal").modal('hide'); // dismiss the dialog
+          });
+        });
+        $("#myModal").on("hide", function() { // remove the event listeners when the dialog is dismissed
+          $("#myModal a.btn").off("click");
+        });
+          $("#myModal").on("hidden", function() { // remove the actual elements from the DOM when fully hidden
+            $("#myModal").remove();
+          });
+        $("#myModal").modal({ // wire up the actual modal functionality and show the dialog
+          "backdrop" : "static",
+          "keyboard" : true,
+          "show" : true // ensure the modal is shown immediately
+});
       var ahora = new Date();
       var faltan = futuro - ahora;
       if (faltan > 0){
@@ -293,9 +310,22 @@
     </script>
   </head>
 
-  <body onload="faltan()">
-
-
+  <body onload="faltan()"> 
+    <!-- Modal -->
+    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Segunda Convocatoria Nacional</h3>
+    </div>
+    <div class="modal-body">
+    <p><p style="float:left; padding-right:7px;"><img src="img/fp2013middle.png" alt=""></p>La coordinación nacional lanza la segunda convocatoria nacional para expresiones de sede a realizarse <strong> del 19 de Febrero del 2013 al 26 de Febrero del 2013.</strong> </p>
+    <br>
+    <strong>Sedes faltantes:<br>Amazonas - Áncash - Arequipa - Ayacucho - Callao - Cajamarca - Cusco - Huancavelica - Huánuco  - Lambayeque - Madre de Dios - Piura - San Martín - Tumbes - Ucayali</strong>
+    </div>
+    <div class="modal-footer">
+      <a class="btn" href="convocatorial.html" >Mas Info &rsaquo;</a>
+    </div>
+    </div>
 
     <!-- NAVBAR
     ================================================== -->
@@ -458,6 +488,7 @@ new TWTR.Widget({
         </div><!-- /.span4 -->
       </div><!-- /.row --><br>
 <div class="span11" style="text-align:justify;" >
+
 El público asistente al FLISOL tendrá la oportunidad de instalar software libre en sus computadoras, laptops y USBs, con lo cual podrán probar que es una alternativa real y segura a modelos de desarrollo y distribución de software tradicionales; se informará sobre la filosofía, cultura y organización alrededor del software libre, y además conocerá las experiencias, desarrollos e investigaciones de grupos y entidades en torno al tema, tanto a nivel local como nacional e internacional.
 <br><br>
 Como complemento a las instalaciones, cada sede del FLISOL en la capital y en ciudades del interior del país contará con otros espacios para charlas, talleres sobre tecnologías abiertas, y muchas actividades más.
